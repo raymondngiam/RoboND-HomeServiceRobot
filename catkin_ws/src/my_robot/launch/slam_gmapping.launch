@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <arg name="gmapping_base_frame" default="robot_footprint"/>
+
+  <!-- slam_gmapping node -->
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+    <remap from="scan" to="/scan"/>
+    <param name="base_frame" value="$(arg gmapping_base_frame)"/>
+  </node>
+
+</launch>
