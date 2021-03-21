@@ -10,6 +10,7 @@ Panels:
         - /Map1
         - /Camera1
         - /PoseArray1
+        - /Marker1
       Splitter Ratio: 0.5
     Tree Height: 468
   - Class: rviz/Selection
@@ -126,6 +127,7 @@ Visualization Manager:
       Visibility:
         Grid: true
         Map: true
+        Marker: true
         PoseArray: true
         RobotModel: true
         Value: true
@@ -145,6 +147,14 @@ Visualization Manager:
       Shape: Arrow (Flat)
       Topic: /particlecloud
       Unreliable: false
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        basic_shapes: true
+      Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
