@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib
   move_base_msgs
   roscpp
+  add_markers
 )
 
 find_package(Threads REQUIRED)
@@ -145,7 +146,7 @@ add_executable(${PROJECT_NAME}_node src/pick_objects.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(${PROJECT_NAME}_node ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME}_node ${catkin_EXPORTED_TARGETS} ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}_node
